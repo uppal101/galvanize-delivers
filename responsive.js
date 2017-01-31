@@ -7,6 +7,7 @@ let total_amount = 0;
 
 
 
+
 // create responsive add button that appears on the table
 burger_button.addEventListener('click', function(){
   let tr = order_list.insertRow(1);
@@ -18,7 +19,7 @@ burger_button.addEventListener('click', function(){
   subtotal_amount.innerHTML = `$${sum.toFixed(2)}`;
   tax_amount = sum * .15;
   tax_td.innerHTML = `$${tax_amount.toFixed(2)}`;
-  total_amount += (sum + tax_amount);
+  total_amount = (sum + tax_amount);
   total_td.innerHTML =`$${total_amount.toFixed(2)}`;
 })
 
@@ -32,13 +33,12 @@ ice_cream_sandwich_button.addEventListener('click', function(){
   subtotal_amount.innerHTML = `$${sum.toFixed(2)}`;
   tax_amount = sum * .15;
   tax_td.innerHTML = `$${tax_amount.toFixed(2)}`;
-  total_amount += (sum + tax_amount);
+  total_amount = (sum + tax_amount);
   total_td.innerHTML = `$${total_amount.toFixed(2)}`;
 })
 
 ribs_button.addEventListener('click',function(){
   let tr = order_list.insertRow(1);
-  // tr.setAttribute('class','right')
   let item = tr.insertCell();
   item.innerHTML ='Smoked Swine';
   let price = tr.insertCell();
@@ -47,7 +47,7 @@ ribs_button.addEventListener('click',function(){
   subtotal_amount.innerHTML = `$${sum.toFixed(2)}`;
   tax_amount = sum * .15;
   tax_td.innerHTML = `$${tax_amount.toFixed(2)}`;
-  total_amount += (sum + tax_amount);
+  total_amount = (sum + tax_amount);
   total_td.innerHTML = `$${total_amount.toFixed(2)}`;
 })
 
@@ -61,8 +61,20 @@ pizza_button.addEventListener('click', function(){
   subtotal_amount.innerHTML = `$${sum.toFixed(2)}`;
   tax_amount = sum * .15;
   tax_td.innerHTML = `$${tax_amount.toFixed(2)}`
-  total_amount += (sum + tax_amount);
+  total_amount = (sum + tax_amount);
   total_td.innerHTML = `$${total_amount.toFixed(2)}`;
 })
 
-// get tax
+
+//toast message
+let orderButton = document.getElementById('download-button');
+
+ function validation(){
+  if(name =="" || phone == "" || address == ""){
+      alert('please fill in all fields');
+      return false;
+  } else {
+  alert("Thank you for your order");
+  return true;
+  }
+};

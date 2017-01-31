@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/materialize.css"  type="text/css" />
   <link rel="stylesheet" href="css/materialize.min.css"  type="text/css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <link rel="stylesheet" href="custom.css" type="text/css"/>
+
 </head>
 <body>
   <!-- header -->
@@ -26,7 +26,7 @@
     <div class="card">
       <div class="card-image">
         <img src="img/burger.jpg">
-        <a class="btn-floating halfway-fab waves-effect waves-light red right"><i class="material-icons" id="burger_button">add</i></a>
+        <a class="btn-floating waves-effect waves-light red right"><i class="material-icons" id="burger_button">add</i></a>
       </div>
       <div class="card-content">
         <h5 class="light">Royale with Cheese</h5>
@@ -36,7 +36,7 @@
     <div class="card">
       <div class="card-image">
         <img src="img/ribs.jpg">
-        <a class="btn-floating halfway-fab waves-effect waves-light red right"><i class="material-icons" id="ribs_button">add</i></a>
+        <a class="btn-floating  waves-effect waves-light red right"><i class="material-icons" id="ribs_button">add</i></a>
       </div>
       <div class="card-content">
         <h5 class="light">Smoked Swine</h5>
@@ -50,7 +50,7 @@
     <div class="card">
       <div class="card-image">
         <img src="img/ice_cream.jpg">
-        <a class="btn-floating halfway-fab waves-effect waves-light red right"><i class="material-icons" id="ice_cream_sandwich_button">add</i></a>
+        <a class="btn-floating  waves-effect waves-light red right"><i class="material-icons" id="ice_cream_sandwich_button">add</i></a>
       </div>
       <div class="card-content">
         <h5 class="light">Ice Cream Biscuits</h5>
@@ -62,7 +62,7 @@
     <div class="card">
       <div class="card-image">
         <img src="img/pizza.jpg">
-        <a class="btn-floating halfway-fab waves-effect waves-light red right"><i class="material-icons" id="pizza_button">add</i></a>
+        <a class="btn-floating  waves-effect waves-light red right"><i class="material-icons" id="pizza_button">add</i></a>
       </div>
       <div class="card-content">
         <h5 class="light">Arugula Pie</h5>
@@ -106,11 +106,11 @@
 
   <!-- Delivery Form -->
   <div class="row">
-  <form class="col s12 ">
+  <form action= "index.html" class="col s12" method= "post" onsubmit= "validation()">
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons red-text prefix">account_circle</i>
-        <input id="icon_prefix" type="text" class="validate">
+        <input id="icon_prefix" type="text" class="validate" required>
         <label for="icon_prefix"> Name</label>
       </div>
     </div>
@@ -118,7 +118,7 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons red-text prefix">phone</i>
-          <input id="icon_telephone" type="tel" class="validate">
+          <input id="icon_telephone" type="number" class="validate" required>
           <label for="icon_telephone">Telephone</label>
         </div>
       </div>
@@ -126,12 +126,12 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons red-text prefix">business</i>
-          <input id="icon_building" type="tel" class="validate">
+          <input id="icon_building" type="tel" class="validate" required>
           <label for="icon_building">Address</label>
         </div>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light #ef5350 red lighten-1">Place Order</a>
+        <button type="submit" id="download-button" class="btn-large waves-effect waves-light #ef5350 red lighten-1">Place Order</button>
       </div>
   </form>
   </div>
